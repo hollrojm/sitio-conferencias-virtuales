@@ -119,6 +119,7 @@ body{
 @media only screen and (min-width:992px) {
   .contenedor {
     width: 90%;
+    max-width: 1100px;
   }
 }
 
@@ -379,4 +380,87 @@ h2{
     page-break-after: avoid;
   }
 }
+/* Barra */
+.barra{
+  background-color: #353535;
+  padding:20px 0;
 
+}
+
+/* Navegacion Principal */
+
+nav.navegacion-principal{
+  display: none;
+}
+
+nav.navegacion-principal a{
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .5s ease;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+nav.navegacion-principal a:hover {
+  background-color: #fe4918;
+}
+
+nav.navegacion-principal a:last-child {
+  border: 2px solid #fe4918;
+  color: #fe4918;
+
+}
+nav.navegacion-principal a:last-child:hover {
+  color: #f2f2f2;
+}
+
+@media only screen and (min-width:768px) {
+  nav.navegacion-principal{
+    width: 67%;
+    float: right;
+    text-align: right;
+    display: block;
+  }
+  nav.navegacion-principal a {
+    padding: 8px 8px;
+    /* line-height: 30px;  */ /* centrar texto con el otro */
+    display: inline-block;
+    width:auto;
+    text-align: center;
+    margin: 0px 10px 0 0;
+    
+  }
+}
+/* Menu movil */
+.menu-movil{
+  width: 60px;
+  display: inline-block;
+  text-align: center;
+  
+  /* margin-top: 12px; */
+ 
+}
+.menu-movil:hover{
+  cursor: pointer;
+}
+
+@media only screen and (min-width:768px) {
+  .menu-movil{
+    display: none;
+  }
+}
+.menu-movil span{
+  height: 6px;
+  margin-bottom: 6px;
+  background-color: white;
+  display: block;
+  
+}
+
+
+
+  
