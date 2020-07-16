@@ -72,8 +72,44 @@
   <section class="seccion contenedor">
     <h2>La mejor pagina de conferencias en Bogotá</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, ea nesciunt vitae alias perferendis ut possimus sunt? Odit possimus consequatur aliquam ut, corrupti quidem, eligendi nam dolores vitae quas a.</p>
-  </section>
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  </section> <!--Seccion  -->
+  <section class="programa" >
+    <div class="contenedor-video">
+      <video autoplay poster="img/bg-talleres.jpg" loop muted>
+      <source src="video/video.mp4" type="video/mp4">
+        <source src="video/video.webm" type="video/webm">
+          <source src="video/video.ogv" type="video/ogv">
+      </video> <!-- .contenedor-video -->
+      <div class="contenido-programa">
+        <div class="contenedor">
+          <div class="programa-evento">
+            <h2>Agendate</h2>
+            <nav class="menu-programa">
+              <a href="#talleres"><i class="fas fa-code" aria-hidden="true"></i>Talleres</a>
+              <a href="#conferencias"><i class="fas fa-comment" aria-hidden="true"></i>Conferencias</a>
+              <a href="#seminarios"><i class="fas fa-university" aria-hidden="true"></i>Seminarios</a>
+            </nav>
+            <div id="talleres" class="info-curso ocultar clearfix">
+              <div class="detalle-evento">
+                <h3> NOMBRE DEL TALLER</h3>
+                <P><i class="fas fa-clock" aria-hidden="true"></i>16:00 hrs</P>
+                <P><i class="fas fa-calendar" aria-hidden="true"></i>16 de Julio</P>
+                <P><i class="fas fa-user" aria-hidden="true"></i>Hollman Rojas</P>
+              </div>
+              <div class="detalle-evento">
+                <h3> NOMBRE DEL TALLER 2</h3>
+                <P><i class="fas fa-clock" aria-hidden="true"></i>20:00 hrs</P>
+                <P><i class="fas fa-calendar" aria-hidden="true"></i>16 de Julio</P>
+                <P><i class="fas fa-user" aria-hidden="true"></i>Hollman Rojas</P>
+              </div>
+              <a href="#" class="button float-right">Ver todos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- .programa -->
+  
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
