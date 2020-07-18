@@ -175,6 +175,9 @@ h3{
   font-size: 2rem;
   margin-right: 20px; /* separacion en los enlaces */
 }
+.redes-sociales a:hover{
+  color: #fe4918;
+}
 .redes-sociales a:last-child{
   margin-right: 0;
 }
@@ -571,7 +574,22 @@ nav.navegacion-principal a:last-child:hover {
   margin-top: 15px;
   display: inline-block;
   transition: all .3s ease;
+  border: 2px solid #fe4918;
 }
+.button.hollow,
+.button.hollow:hover{
+  background-color: white;
+  color: #fe4918;
+
+}
+.button.transparente{
+  background-color: transparent;
+  border-color: #fff;
+}
+.button.transparente:hover{
+  border: 2px solid #fe4918
+}
+
 ul{
   list-style: none;
   margin: 0;
@@ -619,6 +637,7 @@ float: left;
   -webkit-filter: grayscale(0);
   transition: all .5s ease;
   
+  
 }
 .invitado p{
   position: absolute;
@@ -632,7 +651,7 @@ float: left;
   color: #fff;
 }
 /* contador */
-.paralax::before{
+.parallax::before{
   width: 100%;
   height: 100%;
   position: absolute;
@@ -641,6 +660,9 @@ float: left;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed; /* efecto al fondo moviemiento */
+  -webkit-filter: brightness(50%);
+  filter:brightness(50%);
 }
 .contador{
   position: relative;
@@ -648,8 +670,10 @@ float: left;
 
 }
 .contador::before{
-  background-image: url(/img/bg-resumen.jpg);
+  background-image: url(../img/bg-resumen.jpg);
   content: '';
+  
+  
 }
  .resumen-evento{
    position: relative;
@@ -657,9 +681,250 @@ float: left;
  }
  .resumen-evento li{
    width: 50%;
-   float: ;
+   float: left;
+   text-align: center;
+   color: #fff;
+   text-transform: uppercase;
+   font-family: 'Oswald',sans-serif;
+   font-size: 22px;
+   font-weight: bold;
+   
  }
- 
+ @media only screen and (min-width: 768px ) {
+   .resumen-evento li{
+     width: 25%;
+   }
+   
+ }
+ .numero{
+   color: #fe4918;
+   font-size: 3em !important;
+   display: block;
+   margin: 0 0 10px 0;
+ }
+
+ /* seccion Tabla de precios */
+ .lista-precios >li{
+   padding: 10px;
+ }
+
+ @media only screen and (min-width: 768px){
+   .lista-precios>li{
+     float: left;
+     width: 33.3%;
+   }
+ }
+ .tabla-precio{
+   border: 1px solid #e1e1e1;
+   background-color: #fff;
+   padding: 40px 0;
+   text-align: center;
+ }
+ .tabla-precio:hover{
+   transform: scale(1.1);
+   border: 1px solid #fe4918;
+   box-shadow: 0px 0px 50px  #666666;
+   transition: all .5s ease;
+ }
+.tabla-precio ul li{
+  font-family: 'PT Sans',sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #868686;
+  line-height: 26px;
+
+}
+.tabla-precio ul li::before{
+  font-family: "Font Awesome 5 Free";
+  display:inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+  font-size: 18px;
+  color: green;
+  -webkit-font-smoothing: antialiased;
+  content: "\f058"
+}
+.tabla-precio h3{
+  font-family: 'Oswald',sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.tabla-precio p.numero{
+  font-family: 'Oswald',sans-serif;
+  color: #000;
+  margin: 20px 0;
+  font-weight: bold;
+}
+/* Mapa */
+.mapa{
+height: 380px;
+background-color: green;
+}
+
+/* testimonios */
+.testimonios{
+padding-bottom: 20px;
+
+}
+.testimonio{
+  padding: 5px;
+}
+@media only screen and (min-width: 768px){
+  .testimonio{
+    float: left;
+    width: 33.3%;
+  }
+}
+blockquote{
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  position: relative;
+  margin: 0 0 10px 0;
+  padding-bottom: 20px;
+}
+blockquote p{
+  text-align: left !important;
+  font-size: .8em !important;
+  font-family: 'PT Sans', sans-serif;
+  padding: 0 20px 0 65px;
+}
+blockquote p::before{
+  content:"\201c" ;
+  position: absolute;
+  left: 13px;
+  top: 5px;
+  font-size: 8rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: #fe4918;
+}
+.info-testimonio{
+  padding: 0;
+
+}
+.info-testimonio img{
+  float: left;
+  width: 20%;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0 0 0 10px;
+}
+footer.info-testimonio cite{
+  text-align: left;
+  color: #fe4918;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-top: 20px;
+  width: 66.6%;
+  font-weight: bold;
+  font-style: normal;
+  
+}
+.info-testimonio cite span{
+  color: #000;
+  display: block;
+  text-transform: none;
+  margin-top: 5px;
+  margin-left: 10px;
+
+}
+/* newsletter */
+.newsletter{
+  position: relative;
+  height: auto;
+}
+.newsletter::before{
+  background-image: url(../img/bg-newsletter.jpg);
+  content: '';
+}
+.newsletter .contenido{
+  padding: 100px 0;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.newsletter .contenido p{
+  font-size: 1.2em;
+  text-transform: lowercase;
+  
+}
+.newsletter .contenido h3{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* Cuenta Regresiva */
+.cuenta-regresiva ul li{
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem;
+  text-align: center;
+}
+@media only screen and (min-width: 768px){
+  .cuenta-regresiva ul li{
+    width: 25%;
+    float: left;
+  }
+}
+
+/* footer */
+footer.site-footer {
+  background-color: #353535;
+  padding-top: 40px;
+  margin-top: 20px;
+}
+footer .contenedor >div{
+  color: #ffffff;
+  padding: 0px 20px;
+  font-size: 12px;
+  justify-content: center;
+  
+
+}
+@media only screen and (min-width: 768px){
+  footer .contenedor >div{
+    width: 33.3%;
+    float: left;
+  }
+}
+footer.site-footer h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  margin: 20px;
+  
+
+}
+footer.site-footer h3 span {
+  color: #fe4918;
+}
+
+footer .ultimos-tweets li{
+  margin-bottom: 10px;
+}
+footer nav.redes-sociales{
+  text-align: left;
+}
+p.copyright{
+  background-color: #2e2e2e;
+  color: #fff;
+  padding: 10px 0;
+  margin: 20px 0 ;
+  text-align: center;
+  
+}
+
+
+
+
+
+
+
 
 
 
