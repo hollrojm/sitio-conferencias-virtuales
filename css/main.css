@@ -575,6 +575,7 @@ nav.navegacion-principal a:last-child:hover {
   display: inline-block;
   transition: all .3s ease;
   border: 2px solid #fe4918;
+  cursor: pointer;
 }
 .button.hollow,
 .button.hollow:hover{
@@ -759,7 +760,7 @@ float: left;
 /* Mapa */
 .mapa{
 height: 380px;
-background-color: green;
+background-color: #DDDDDD;
 }
 
 /* testimonios */
@@ -966,7 +967,7 @@ div.paquetes .tabla-precio input{
 }
 .contenido-dia{
   padding: 20px;
-  /* display: none; */
+  display: none; 
 
 }
 @media only screen and (min-width:768px) {
@@ -1018,8 +1019,24 @@ div.resumen input{
   margin: 20px auto;
   
 }
+#lista-productos{
+  background-color: #e1e1e1;
+  padding: 20px;
+  display: none;
+}
 
-
+#suma-total{
+text-align: center;
+font-size: 2em;
+color: #fe4918;
+}
+#error{
+  clear: both;
+  text-align: center;
+  color: red;
+  padding: 10px;
+  display: none;
+}
 
 
 
