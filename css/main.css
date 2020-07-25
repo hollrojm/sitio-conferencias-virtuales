@@ -151,6 +151,44 @@ h3{
   color: #fe4918;
   font-family: 'PT Sans',sans-serif;
 }
+/* LETTERING */
+h1.nombre-sitio span{
+  position: relative; /*  */
+  text-shadow: 0 0 30px black;
+
+}
+@media only screen and (min-width: 992px ) {
+
+  .char1 {
+    top: 20px; left: 20px;
+  }
+  .char2 {
+    top: 0px;
+    left: -20px;
+    color: #fe4918;
+  }
+  .char3{
+      top: 10px;
+      right:20px;
+  }
+  .char4{
+    top: 5px;
+    right:10px;
+  }
+  .char5{
+      top: 15px;
+      right:10px;
+  }
+  .char6{
+    top: 5px;
+    left: 10px;
+  }
+  .char7{
+    top: 20px;
+    left: -10px;
+    color: #fe4918;
+  }
+}
 /* header */
 
 .hero{
@@ -411,11 +449,20 @@ h3{
   padding:20px 0;
 
 }
+.fixed{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+}
 
 /* Navegacion Principal */
 
-nav.navegacion-principal{
+.navegacion-principal {
   display: none;
+  width: 100%;
 }
 
 nav.navegacion-principal a{
@@ -518,8 +565,8 @@ nav.navegacion-principal a:last-child:hover {
 
 .menu-programa{
   width: 100%;
-  border-bottom: 1px solid #fe4918;
-  padding-bottom: 10px;
+  
+  
 }
 
 @media only screen and (min-width: 768px){
@@ -536,12 +583,33 @@ nav.navegacion-principal a:last-child:hover {
   font-family: 'Open Sans',sans-serif;
   margin-bottom: 10px;
   font-size: 1.2em;
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fe4918;
+}
+nav.menu-programa a.activo::after{
+  position: absolute;
+  content: '';
+  /* POSICIONA EL ELEMENTO A LA MITAD HORIZONTALMENTE */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  width: 30px;
+  margin-top: 36px;
+  background-image: url('../img/talleres-flecha.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+
+
 }
 @media only screen and (min-width: 768px){
 .menu-programa a{
   display: table-cell;
 }
 }
+
 .menu-programa a i,
 .detalle-evento p i{
   color: #fe4918;
@@ -635,7 +703,7 @@ float: left;
   
 }
 .invitado img:hover{
-  -webkit-filter: grayscale(0);
+  -webkit-filter: grayscale(0); 
   transition: all .5s ease;
   
   
@@ -920,6 +988,15 @@ p.copyright{
   
 }
 /********** INTERNAS ******/
+/* CONFERENCIAS */
+body.conferencia .navegacion-principal .activo{
+  border-bottom: 2px solid #fe4918;
+
+}
+.galeria a{
+  display: inline-block;
+  margin-bottom: 10px;
+}
 /* Registro */
 form.registro h3{
   text-align: center;
@@ -970,12 +1047,15 @@ div.paquetes .tabla-precio input{
   display: none; 
 
 }
+div.ocultar{
+  display: none;
+}
 @media only screen and (min-width:768px) {
 .contenido-dia  >div {
   /* Aplica al primer hijo */
   float: left;
   width: 33.3%;
-
+}
 }
 .contenido-dia > div p{
   text-align: left;
@@ -1031,7 +1111,7 @@ font-size: 2em;
 color: #fe4918;
 }
 
-#error{
+#error {
   clear: both;
   text-align: center;
   color: red;

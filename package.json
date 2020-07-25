@@ -1,0 +1,22 @@
+{
+  "name": "conferencias",
+  "version": "1.0.0",
+  "description": "Mi primer proyecto con JavaScript",
+  "main": "main.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hollrojm/sitio-conferencias-virtuales.git"
+  },
+  "author": "Hollman Rojas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hollrojm/sitio-conferencias-virtuales/issues"
+  },
+  "homepage": "https://github.com/hollrojm/sitio-conferencias-virtuales#readme"
+}

@@ -1,18 +1,11 @@
 (function(){
-    "use strict";
+    /* "use strict"; */
     var regalo =document.getElementById('regalo');
 
     document.addEventListener('DOMContentLoaded', function(){
+        
 
-        var map = L.map('mapa').setView([4.723728, -73.973651], 15);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        L.marker([4.723728, -73.973651]).addTo(map)
-          .bindPopup('La Calera,  Cundinamarca.<br> Colombia.')
-          .openPopup();
+    
         
         //CAMPOS DATOS DE USUARIO
         var nombre = document.getElementById('nombre');
@@ -37,7 +30,8 @@
         var etiquetas = document.getElementById('etiquetas');
 
         //EVENTOS
-        calcular.addEventListener('click', calcularMontos);
+    if(document.getElementById ('calcular')){
+        calcular.addEventListener('click', calcularMontos);       
         pase_dia.addEventListener('blur', mostrarDias);
         pase_dosdias.addEventListener('blur', mostrarDias);
         pase_completo.addEventListener('blur', mostrarDias);
@@ -70,8 +64,6 @@
                 errorDiv.style.border = '1px solid red';
             }
         }
-
-
 
 
         function calcularMontos(event){
@@ -154,9 +146,81 @@
       
         }
 
-
+        
+    }
     
 
     });// DOM CONTENT LOADED
 
 })();
+
+$(function(){
+
+    //EFECTOS LETRAS CON LETTERING
+
+    $('.nombre-sitio').lettering();
+
+    //MENU FIJO
+    var windowHeight = $(window).height();
+    var barraAltura = $('.barra').innerHeight();
+
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop(); //IMPORTANTE
+        if(scroll > windowHeight){
+            $('.barra').addClass('fixed');
+            $('body').css({'margin-top': barraAltura +'px'});
+        }else{
+            $('.barra').removeClass('fixed');
+            $('body').css({'margin-top':'0px'});
+        }
+        
+    });
+
+    //MENU RESPONSIVE
+    $('.menu-movil').click(function(){
+        
+        $('.navegacion-principal').slideToggle();
+    });
+
+    //PROGRAMA DE CONFERENCIAS
+    $('.programa-evento .info-curso:first').show();
+    $('menu-programa a:first').addClass('activo');
+  $('.menu-programa a').on('click', function(){
+    $('.menu-programa a').removeClass('activo');
+      $(this).addClass('activo');
+      $('.ocultar').hide();
+
+      var enlace = $(this).attr('href');
+      $(enlace).fadeIn(1000);
+
+      return false;
+  });
+
+    //ANIMACIONES PARA LOS NUMEROS
+    var resumenLista = $('.resumen-evento');
+    if(resumenLista.length > 0){
+        $('.resumen-evento').waypoint(function () {
+            $('.resumen-evento li:nth-child(1) p').animateNumber({ number: 6 }, 1200);
+            $('.resumen-evento li:nth-child(2) p').animateNumber({ number: 15 }, 1200);
+            $('.resumen-evento li:nth-child(3) p').animateNumber({ number: 3 }, 1500);
+            $('.resumen-evento li:nth-child(4) p').animateNumber({ number: 9 }, 1200);
+
+        }, {
+            offset: '40%'
+        });
+    }
+    
+
+    //CUENTA REGRESIVA
+
+    $('.cuenta-regresiva').countdown('2020/09/26 24:00:00', function(event){
+        $('#dias').html(event.strftime ('%D'));
+        $('#horas').html(event.strftime('%H'));
+        $('#minutos').html(event.strftime('%M'));
+        $('#segundos').html(event.strftime('%S'));
+
+
+    })
+    
+
+});
